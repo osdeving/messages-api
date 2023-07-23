@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
 
+require('dotenv').config()
+
+
+
+
 const APP_PORT = process.env.APP_PORT ?? 3000
 const APP_HOST = process.env.APP_HOST ?? 'https://127.0.0.1'
 
