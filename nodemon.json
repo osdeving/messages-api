@@ -8,7 +8,6 @@
         "src/**/*.spec.js",
         "src/**/*.test.ts",
         "src/**/*.test.js"
-        
     ],
     "exec": "node --inspect=3949 src/index.js dotenv_config_path=.env"
 }
