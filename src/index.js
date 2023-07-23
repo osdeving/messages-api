@@ -80,6 +80,6 @@ app.patch('/messages/:id', (req, resp) => {
     resp.status(200).send(messages[req.params.id]);
 })
 
-app.listen(APP_PORT, () => console.info(`App rodando em ${APP_HOST}:${APP_PORT}`));
+let server = app.listen(APP_PORT, () => console.info(`App rodando em ${APP_HOST}:${APP_PORT}`));
 
-module.exports = app
+module.exports = {app, server}

@@ -1,5 +1,5 @@
+const { app, server } = require('../src/index');
 const request = require('supertest');
-const app = require('../index');
 
 describe('API Endpoints', () => {
     // GET /messages
@@ -24,7 +24,7 @@ describe('API Endpoints', () => {
     it('should get a message by id', async () => {
         const res = await request(app).get('/messages/1');
         expect(res.statusCode).toEqual(200);
-        expect(res.body.text).toEqual('Test message');
+        expect(res.body.text).toEqual('Minha segunda mensagem');
     });
 
     // PUT /messages/:id
@@ -34,7 +34,7 @@ describe('API Endpoints', () => {
             .send({
                 text: 'Updated test message'
             });
-        expect(res.statusCode).toEqual(201);
+        expect(res.statusCode).toEqual(200);
         expect(res.body.text).toEqual('Updated test message');
     });
 
@@ -54,4 +54,10 @@ describe('API Endpoints', () => {
         expect(res.statusCode).toEqual(200);
         expect(res.body.text).toEqual('Patched test message');
     });
+
+    afterAll(done => {
+        server.close(done);
+    });
 });
+
+
