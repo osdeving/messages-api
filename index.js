@@ -14,4 +14,4 @@ console.table(messages)
 
 app.get('/hello', (req, resp) => resp.send('Hello, World!'))
 
-app.listen('3000', () => console.info(`App rodando em ${APP_HOST}:${APP_PORT}`))
+app.listen(APP_PORT, () => console.info(`App rodando em ${APP_HOST}:${APP_PORT}`))
