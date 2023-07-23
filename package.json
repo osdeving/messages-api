@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon index"
+    "dev": "nodemon index",
+    "test": "jest"
   },
   "author": "Willams Sousa",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "jest": "^29.6.1",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
